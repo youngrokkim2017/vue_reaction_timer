@@ -36,7 +36,9 @@ export default {
         },
         stopTimer() {
             clearInterval(this.timer)
-            console.log(this.reactionTime)
+            // console.log(this.reactionTime)
+            // emit CUSTOM EVENT to send data to parent app then to child results
+            this.$emit('end', this.reactionTime)
         }
     }
 }
